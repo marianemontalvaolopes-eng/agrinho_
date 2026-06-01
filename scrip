@@ -1,0 +1,19 @@
+// Dados interativos sobre o MIP
+const informacoesMIP = {
+    cultural: "O Controle Cultural adota práticas que desfavorecem o desenvolvimento de pragas. Exemplos básicos cobrados no Agrinho: a rotação de culturas, destruição de restos culturais e a época correta de plantio.",
+    biologico: "O Controle Biológico aproveita a própria natureza! Consiste na preservação ou liberação de inimigos naturais no ecossistema (como joaninhas que comem pulgões), reduzindo drasticamente a necessidade de venenos.",
+    quimico: "No MIP, o Controle Químico é o último recurso. Ele só deve ser usado quando a população da praga atinge o 'nível de dano econômico'. A aplicação deve ser segura, com EPIs e produtos seletivos."
+};
+
+// Função para atualizar a tela dinamicamente
+function mostrarDetalhes(pilar) {
+    const painelTexto = document.getElementById("info-texto");
+    
+    // Efeito visual suave de troca de texto
+    painelTexto.style.opacity = 0;
+    
+    setTimeout(() => {
+        painelTexto.textContent = informacoesMIP[pilar];
+        painelTexto.style.opacity = 1;
+    }, 200);
+}
